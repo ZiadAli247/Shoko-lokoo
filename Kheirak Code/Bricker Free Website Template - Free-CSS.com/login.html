@@ -77,6 +77,15 @@
                         <input type="password" class="pass-key" required placeholder="Password">
                         <span class="show">SHOW</span>
                      </div>
+                     <div class="field space">
+                        <span class="fa fa-user"></span>
+                        <select required>
+                           <option value="" disabled selected>Login As...</option>
+                           <option value="admin">Admin</option>
+                           <option value="donor">Donor</option>
+                           <option value="organization">Organization</option>
+                        </select>
+                     </div>
                      <div class="pass">
                         <a href="#">Forgot Password?</a>
                      </div>
@@ -112,6 +121,21 @@
                   showBtn.style.color = "#222";
                 }
                });
+
+               const form = document.querySelector('form');
+               form.onsubmit = function(event) {
+                  event.preventDefault();
+                  const formFields = document.querySelectorAll('form .field');
+                  const email = formFields[0].children[1].value;
+                  const password = formFields[1].children[1].value;
+                  const loginAs = formFields[2].children[1].value;
+
+                  console.log(`email: ${email}, password: ${password}, loginAs: ${loginAs}`);
+
+                  if (loginAs === 'organization') {
+                     window.location.replace('organization.html');
+                  }
+               }
             </script>
          </body>
       </html>
