@@ -1,118 +1,111 @@
 <!DOCTYPE html>
 <html lang="en-US">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title> kheirak</title>
-      <link rel="icon" type="image/x-icon" href="img/kheirakicon.ico">
-      <link rel="stylesheet" href="css/components.css">
-      <link rel="stylesheet" href="css/icons.css">
-      <link rel="stylesheet" href="css/responsee.css">
-      <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
-      <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-      <!-- CUSTOM STYLE -->      
-      <link rel="stylesheet" href="css/template-style.css">
-      <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">  
-      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-      <script type="text/javascript" src="js/jquery-ui.min.js"></script>   
-   </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> kheirak</title>
+  <link rel="icon" type="image/x-icon" href="img/kheirakicon.ico">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/responsee.css">
+  <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+  <!-- CUSTOM STYLE -->      
+  <link rel="stylesheet" href="css/template-style.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">  
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>   
+  <style>
+    body {
+      background-image: url("img/loginchildren.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="size-1520 primary-color-red background-dark">
+  <!-- HEADER -->
+  <header class="grid">
+    <!-- Top Navigation -->
+    <nav class="s-12 grid background-none background-primary-hightlight">
+      <!-- logo -->
+      <a href="index.html" class="m-12 l-3 padding-4x logo" style="padding-top: 5px;">
+        <img src="img/kheirak.png">
+      </a>
+      <div class="top-nav s-12 l-9"> 
+        <ul class="top-ul right chevron">
+          <li><a href="login.html">Dashboard</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-   <!--
-    You can change the color scheme of the page. Just change the class of the <body> tag. 
-    You can use this class: "primary-color-white", "primary-color-red", "primary-color-orange", "primary-color-blue", "primary-color-aqua", "primary-color-dark" 
-    -->
-    
-    <!--
-    Each element is able to have its own background or text color. Just change the class of the element.  
-    You can use this class: 
-    "background-white", "background-red", "background-orange", "background-blue", "background-aqua", "background-primary" 
-    "text-white", "text-red", "text-orange", "text-blue", "text-aqua", "text-primary"
-    -->
+  <div class="bg-img">
+    <div class="content">
+      <header>Login Form</header>
+      <form id="loginForm" action="dash.html">
+        <div class="field">
+          <span class="fa fa-user"></span>
+          <input id="username" type="text" required placeholder="Email or Phone">
+        </div>
+        <div class="field space">
+          <span class="fa fa-lock"></span>
+          <input id="password" type="password" class="pass-key" required placeholder="Password">
+          <span class="show">SHOW</span>
+        </div>
+        <div class="pass">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <div class="field">
+          <input id="loginButton" type="submit" value="LOGIN">
+        </div>
+      </form>
+      <div class="login">
+        <!-- Removed go to dashboard button -->
+      </div>
+      <div class="links">
+        <div class="facebook">
+          <i class="fab fa-facebook-f"><span>Facebook</span></i>
+        </div>
+        <div class="instagram">
+          <i class="fab fa-instagram"><span>Instagram</span></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
-   <body class="size-1520 primary-color-red background-dark">
-      <!-- HEADER -->
-      <header class="grid">
-        <!-- Top Navigation -->
-        <nav class="s-12 grid background-none background-primary-hightlight">
-           <!-- logo -->
-           <a href="index.html" class="m-12 l-3 padding-4x logo" style="padding-top: 5px;">
-            <img src="img/kheirak.png">
-        </a>
-           <div class="top-nav s-12 l-9"> 
-              <ul class="top-ul right chevron">
-                <li><a href="login.html">Dashboard</a></li>
+  <script>
+    const pass_field = document.querySelector('.pass-key');
+    const showBtn = document.querySelector('.show');
+    showBtn.addEventListener('click', function(){
+      if(pass_field.type === "password"){
+        pass_field.type = "text";
+        showBtn.textContent = "HIDE";
+        showBtn.style.color = "#3498db";
+      } else {
+        pass_field.type = "password";
+        showBtn.textContent = "SHOW";
+        showBtn.style.color = "#222";
+      }
+    });
 
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-           </div>
-        </nav>
-      </header>
+    // Function to handle form submission
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
 
-      
-    
-         <head>
-  <meta charset="utf-8">
-            <title>Transparent Login Form HTML CSS</title>
-            <link rel="stylesheet" href="css/template-style.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-            <img src="img/loginchildren.jpg" class="login-image">                      
-
-         </head>
-         <body>
-
-            <div class="bg-img">
-               <div class="content">
-                  <header>Login Form</header>
-                  <form action="#">
-                     <div class="field">
-                        <span class="fa fa-user"></span>
-                        <input type="text" required placeholder="Email or Phone">
-                     </div>
-                     <div class="field space">
-                        <span class="fa fa-lock"></span>
-                        <input type="password" class="pass-key" required placeholder="Password">
-                        <span class="show">SHOW</span>
-                     </div>
-                     <div class="pass">
-                        <a href="#">Forgot Password?</a>
-                     </div>
-                     <div class="field">
-                        <input type="submit" value="LOGIN">
-                     </div>
-                  </form>
-                  <div class="login">
-                     <a href="dash.html"> go to dashboard </a>                 
-                   </div>
-                  <div class="links">
-                     <div class="facebook">
-                        <i class="fab fa-facebook-f"><span>Facebook</span></i>
-                     </div>
-                     <div class="instagram">
-                        <i class="fab fa-instagram"><span>Instagram</span></i>
-                     </div>
-                  </div>
-                  
-               </div>
-            </div>
-            <script>
-               const pass_field = document.querySelector('.pass-key');
-               const showBtn = document.querySelector('.show');
-               showBtn.addEventListener('click', function(){
-                if(pass_field.type === "password"){
-                  pass_field.type = "text";
-                  showBtn.textContent = "HIDE";
-                  showBtn.style.color = "#3498db";
-                }else{
-                  pass_field.type = "password";
-                  showBtn.textContent = "SHOW";
-                  showBtn.style.color = "#222";
-                }
-               });
-            </script>
-         </body>
-      </html>
-      
+      // Check if username or password is empty
+      if (username === "" || password === "") {
+        event.preventDefault(); // Prevent form submission
+        alert("Please enter both username and password.");
+      }
+    });
+  </script>
+</body>
+</html>
