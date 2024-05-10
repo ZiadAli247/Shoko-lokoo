@@ -52,74 +52,46 @@
                     <a href="index.html" class="">
                         <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Kheirak</h3>
                     </a>
-                    <h3>Donor Sign Up</h3>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">First Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">Last Name</label>
+                    <h3>Teacher Sign Up</h3>
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-check-label">Gender:</label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="maleRadio" name="gender" value="male">
-                        <label class="form-check-label" for="maleRadio">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="femaleRadio" name="gender" value="female">
-                        <label class="form-check-label" for="femaleRadio">Female</label>
-                    </div>
+                <!-- Additional fields for subjects and pro-bono classes/students -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingSubjects" placeholder="Subjects you can teach">
+                    <label for="floatingSubjects">Subjects You Can Teach</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email</label>
+                    <input type="number" class="form-control" id="floatingClasses" placeholder="Number of Pro-bono Classes">
+                    <label for="floatingClasses">Number of Pro-bono Classes</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">Contact Number</label>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">Address</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">Area</label>
+                    <input type="number" class="form-control" id="floatingStudents" placeholder="Number of Pro-bono Students">
+                    <label for="floatingStudents">Number of Pro-bono Students</label>
                 </div>
 
-                <div class="form-floating mb-3">
-                    <select class="form-select" id="governorateSelect">
-                        <option value="" disabled selected>Select Governorate</option>
-                        <option value="Cairo">Cairo</option>
-                        <option value="Alexandria">Alexandria</option>
-                        <option value="Giza">Giza</option>
-                        <!-- Add more options for other governorates as needed -->
-                    </select>
-                    <label for="governorateSelect">Governorate</label>
+                <!-- Upload document(s) for verification -->
+                <div class="form-group mb-3">
+                    <label for="verificationDocuments" class="form-label">Upload Documents for Verification</label>
+                    <input type="file" class="form-control-file" id="verificationDocuments" multiple accept="image/*,.pdf">
+                    <small class="form-text text-muted">Upload document(s) to prove your qualifications (e.g., teaching credentials).</small>
                 </div>
 
                 <div class="d-flex align-items-center justify-content-between mb-4">
                    
                     <a href=""> </a>
                 </div>
-                <form action="DonorType.html">
-                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Continue</button>
+                <form action="signin.html">
+                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 <!-- Sign Up End -->
+
+
     </div>
 
     <!-- JavaScript Libraries -->

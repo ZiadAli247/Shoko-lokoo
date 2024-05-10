@@ -54,47 +54,16 @@
                     </a>
                     <h3>Donor Sign Up</h3>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">First Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">Last Name</label>
-                </div>
 
-                <div class="mb-3">
-                    <label class="form-check-label">Gender:</label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="maleRadio" name="gender" value="male">
-                        <label class="form-check-label" for="maleRadio">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="femaleRadio" name="gender" value="female">
-                        <label class="form-check-label" for="femaleRadio">Female</label>
-                    </div>
+                <!-- Additional fields for donor's clinic location, specialty, and pro-bono cases -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="clinicAddress" placeholder="Clinic Address">
+                    <label for="clinicAddress">Clinic Address</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">Contact Number</label>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">Address</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                    <label for="floatingText">Area</label>
+                    <input type="text" class="form-control" id="clinicArea" placeholder="Clinic Area">
+                    <label for="clinicArea">Clinic Area</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -108,18 +77,38 @@
                     <label for="governorateSelect">Governorate</label>
                 </div>
 
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="specialty" placeholder="Specialty">
+                    <label for="specialty">Specialty</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="proBonoCases" placeholder="Number of Pro-bono Cases">
+                    <label for="proBonoCases">Number of Pro-bono Cases</label>
+                </div>
+
+                <!-- Upload document(s) for verification -->
+                <div class="form-group mb-3">
+                    <label for="verificationDocuments" class="form-label">Upload Documents for Verification</label>
+                    <input type="file" class="form-control-file" id="verificationDocuments" multiple accept="image/*,.pdf">
+                    <small class="form-text text-muted">Upload document(s) to prove your qualifications (e.g., doctor's certificate, clinic documents).</small>
+                </div>
+
                 <div class="d-flex align-items-center justify-content-between mb-4">
                    
                     <a href=""> </a>
                 </div>
-                <form action="DonorType.html">
-                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Continue</button>
+                <form action="signin.html">
+                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 <!-- Sign Up End -->
+
+
+
     </div>
 
     <!-- JavaScript Libraries -->
