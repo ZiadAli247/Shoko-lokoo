@@ -36,9 +36,6 @@
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
         </div>
         <!-- Spinner End -->
 
@@ -55,25 +52,20 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">GucUser12</h6>
-                        <span>Admin</span>
+                        <h6 class="mb-0">User1</h6>
+                        <span>Donor</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Home</a>
                 
-                    <a href="dash.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="Donordash.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                 
-                    <div class="nav-item dropdown active">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Requests</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="button.html" class="dropdown-item">Donor Requests</a>
-                            <a href="typography.html" class="dropdown-item">Donation Requests</a>
-                            <a href="element.html" class="dropdown-item">Match Requests</a>
-                        </div>
+                    <div class="nav-item active">
+                        <a href="donortypography.html" class="nav-link"><i class="fa fa-laptop me-2"></i>Requests</a>
                     </div>
+                    
                 
-                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>View Donors</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>View the in need</a>
                 </div>
                 
@@ -162,7 +154,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/usericon.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">GucUser12</span>
+                            <span class="d-none d-lg-inline-flex">User1</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
@@ -247,12 +239,12 @@
             <!-- Sales Chart End -->
 
 
-             <!-- Recent Sales Start -->
-             <div class="container-fluid pt-4 px-4">
+            <!-- Recent Sales Start -->
+            <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Recent Requests</h6>
-                        <a href="typography.html">Show All</a>
+                        <a href="donortypography.html">Show All</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -262,9 +254,8 @@
                                     <th scope="col">Need</th>
                                     <th scope="col">Entity</th>
                                     <th scope="col">Quantity</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Accept</th>
-                                    <th scope="col">Reject</th>
+                                    <th scope="col">Donate</th>
+                                    <th scope="col">Quantity to Donate</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -273,18 +264,16 @@
                                     <td>books</td>
                                     <td>German University in Cairo</td>
                                     <td>70</td>
-                                    <td>Pending</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Accept</a></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Reject</a></td>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><input type="text" class="form-control" placeholder=""></td>
                                 </tr>
                                 <tr>
                                     <td>2-5-2024</td>
                                     <td>Food</td>
                                     <td>Misr El Kheir</td>
                                     <td>200</td>
-                                    <td>Pending</td>
-                                    <td><a class="btn btn-sm btn-primary" href=""></a></td>
-                                    <td><a class="btn btn-sm btn-primary" href=""></a></td>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><input type="text" class="form-control" placeholder=""></td>
                                 </tr>
                             </tbody>
                         </table>
