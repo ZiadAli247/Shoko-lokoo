@@ -1,6 +1,9 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> kheirak</title>
@@ -23,15 +26,7 @@
             .bg-dark {
                 margin-top: 33px;
             }
-            .container {
-              background-color: #C81010;
-              padding: 20px;
-              border-radius: 5px;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-              width: 90%;
-              margin: 0 auto;
-              color: #f0f0f0;
-            }
+            
             h2 {
               margin-top: 0;
               font-size: 24px;
@@ -39,20 +34,7 @@
               margin-bottom: 20px;
               color: #f0f0f0;
             }
-            .time-slots {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-gap: 10px;
-            }
-            .time-slot {
-              border: 1px solid #ccc;
-              padding: 10px;
-              text-align: center;
-              cursor: pointer;
-            }
-            .time-slot:hover {
-              background-color: #002633;
-            }
+           
             .donation-post {
                 background-color: #C81010;
                 padding: 20px;
@@ -97,7 +79,7 @@
                 position: relative;
                 display: block;
                 background-repeat: no-repeat !important;
-                background: url('./img/bell.png') !important;
+                background: url('./img/bell.png') !important; 
                 background-size: contain;
                 text-decoration: none;
             }
@@ -107,10 +89,33 @@
                 top: 6px;
                 color: #fff;
             }
+            body {
+  margin: 0; 
+  padding: 0; 
+}
+
+#centered-button {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #C81010; 
+  color: white;
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 5px; 
+  font-size: 26px; 
+  cursor: pointer; 
+  margin-top: 7%;
+  width: 400px;
+  text-align: center;
+}
+            
           </style>
           
     </head>
 <body>
+    
     <header class="grid">
         <!-- Top Navigation -->
         <nav class="s-12 grid background-none background-primary-hightlight">
@@ -126,28 +131,17 @@
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <!-- <li><a href="" class="notif"><span class="num">1</span></a></li> -->
+                <li><a href="contact.html">Contact</a></li>   
+                <li><a href="organizationPosts.html">View Posts</a></li>
+                <li>
+                    <a href="organizationNotification.html">1 NOTIFICATION</a>
+                  </li>
+                 
               </ul>
            </div>
         </nav>
       </header>
-    <div class="bg-dark">
-        <div class="container">
-            <h2>Schedule Selection for Donation Drop-off</h2>
-            <div class="time-slots">
-              <div class="time-slot">9:00 AM - 10:00 AM</div>
-              <div class="time-slot">10:00 AM - 11:00 AM</div>
-              <div class="time-slot">11:00 AM - 12:00 PM</div>
-              <div class="time-slot">12:00 PM - 1:00 PM</div>
-              <div class="time-slot">1:00 PM - 2:00 PM</div>
-              <div class="time-slot">2:00 PM - 3:00 PM</div>
-              <div class="time-slot">3:00 PM - 4:00 PM</div>
-              <div class="time-slot">4:00 PM - 5:00 PM</div>
-              <div class="time-slot">5:00 PM - 6:00 PM</div>
-            </div>
-        </div>
-    </div>
+    
     <div class="donation-post">
         <h2>Create Donation Post for Organizations</h2>
         <form action="#" method="post">
@@ -229,5 +223,13 @@
         }
     }
     </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Button in the Middle</title>
+    <link rel="stylesheet" href="style.css"> </head>
+    <body>
+        <a href="FulfilledPosts.html" id="centered-button">View Fulfilled Posts</a>
+        </body>
+
 </body>
 </html>
