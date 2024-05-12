@@ -32,52 +32,81 @@
     <link href="css/style.css" rel="stylesheet">
     
     <style>
-         body {
+            body {
               font-family: Arial, sans-serif;
               background-color: #002633;
             }
-  .container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
+            .bg-dark {
+                margin-top: 33px;
+            }
+            .container {
+              background-color: #C81010;
+              padding: 20px;
+              border-radius: 5px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              width: 90%;
+              margin: 0 auto;
+              color: #f0f0f0;
+              margin-top: 20%;
+            }
+            h2 {
+              margin-top: 0;
+              font-size: 24px;
+              text-align: center;
+              margin-bottom: 20px;
+              color: #f0f0f0;
+            }
+            p{
+    color: #f0f0f0;
+    font-size: 20px;
   }
-  table {
-    width: 60%; 
-    height: 70%;
+            .time-slots {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-gap: 10px;
+            }
+            .time-slot {
+              border: 1px solid #ccc;
+              padding: 10px;
+              text-align: center;
+              cursor: pointer;
+            }
+            .time-slot:hover {
+              background-color: #002633;
+            }
+            
+            
+            #centered-text {
+              color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; 
+    position: absolute;
+    top: 50px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin-top: 15%;
+}
+.details-btn {
+    
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: 15%; 
+    height: 5%;
     border-collapse: collapse;
-    background-color: #C81010;
+    background-color: #002633;
     position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
-  margin-top: 6%;
+  margin-top: 0%;
+  color:#002633;
+   
+    color: #f0f0f0;
+  }
 
-  }
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-    color:#ddd;
-
-
-  }
-  th {
-    background-color: #C81010;
-  }
-  .options {
-    display: flex;
-    justify-content: space-around;
-    
-  }
-  .options a {
-    text-decoration: none;
-    color:#ddd;
-    cursor: pointer;
-  }
-  .options a:hover {
-    text-decoration: underline;
-  }
+  
 
       </style>
       
@@ -116,7 +145,13 @@
                     <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Home</a>
             
 
-                    <a href="FulfilledPosts.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Fulfilled Posts</a>
+                    <div class="nav-item dropdown active">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Posts</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="FulfilledPosts.html" class="dropdown-item">Fulfilled posts</a>
+                            <a href="organizationPosts.html" class="dropdown-item">my posts</a>
+                           
+                        </div>
                 </div>
                 
             </nav>
@@ -219,52 +254,35 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-            <div class="container">
-              <table id="postTable">
-                <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Options</th>
-                </tr>
-                <tr>
-                  <td>school supplies request</td>
-                  <td>math and science book for grade 7</td>
-                  <td class="options">
-                    <a href="#" onclick="deleteRow(this)">Delete</a>
-                    <a href="updatePostInfoORG.html">Update</a>
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>toys request</td>
-                  <td> toys of age range 9-11</td>
-                  <td class="options">
-                    <a href="#" onclick="deleteRow(this)">Delete</a>
-                    <a href="updatePostInfoORG.html">Update</a>
-                   
-                  </td>
-                </tr>
-                <tr>
-                  <td>clothes request</td>
-                  <td>1 blue shirt small
-                      2 black trousers meduim
-                  </td>
-                  <td class="options">
-                    <a href="#" onclick="deleteRow(this)">Delete</a>
-                    <a href="updatePostInfoORG.html">Update</a>
-                    
-                  </td>
-                </tr>
-           
-              </table>
+            <div class="bg-dark">
+                <div class="container">
+                    <div class="field space">
+                        <span class="fa fa-user"></span>
+                        <select required>
+                           <option value="" disabled selected>choose donation approved post</option>
+                           <option value="post1">post1</option>
+                           <option value="post2">post2</option>
+                           <option value="post3">post3</option>
+                        </select>
+                     </div>
+                    <h2>Schedule Selection for Donation Drop-off</h2>
+                    <div class="time-slots">
+                      <div class="time-slot">9:00 AM - 10:00 AM</div>
+                      <div class="time-slot">10:00 AM - 11:00 AM</div>
+                      <div class="time-slot">11:00 AM - 12:00 PM</div>
+                      <div class="time-slot">12:00 PM - 1:00 PM</div>
+                      <div class="time-slot">1:00 PM - 2:00 PM</div>
+                      <div class="time-slot">2:00 PM - 3:00 PM</div>
+                      <div class="time-slot">3:00 PM - 4:00 PM</div>
+                      <div class="time-slot">4:00 PM - 5:00 PM</div>
+                      <div class="time-slot">5:00 PM - 6:00 PM</div>
+                    </div>
+                </div>
+              
             </div>
             
-            <script>
-              function deleteRow(link) {
-                var row = link.parentNode.parentNode;
-                row.parentNode.removeChild(row);
-              }
-            </script>
+            
+           
         
             
             <!-- Footer Start -->

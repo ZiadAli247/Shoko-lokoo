@@ -32,54 +32,59 @@
     <link href="css/style.css" rel="stylesheet">
     
     <style>
-         body {
-              font-family: Arial, sans-serif;
-              background-color: #002633;
-            }
-  .container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-  }
-  table {
-    width: 60%; 
-    height: 70%;
-    border-collapse: collapse;
-    background-color: #C81010;
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  margin-top: 6%;
-
-  }
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-    color:#ddd;
-
-
-  }
-  th {
-    background-color: #C81010;
-  }
-  .options {
-    display: flex;
-    justify-content: space-around;
-    
-  }
-  .options a {
-    text-decoration: none;
-    color:#ddd;
-    cursor: pointer;
-  }
-  .options a:hover {
-    text-decoration: underline;
-  }
-
+        body {
+          font-family: Arial, sans-serif;
+          background-color:#f0f0f0;
+        }
+        .container {
+          background-color: #C81010;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          width: 400px;
+          margin: 50px auto;
+        }
+        h2 {
+          margin-top: 0;
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+        label {
+          font-weight: bold;
+          margin-bottom: 5px;
+          color: #fff;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="submit"] {
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        input[type="submit"] {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        input[type="submit"]:hover {
+          background-color: #0056b3;
+        
+        }
+        .delete-account-btn {
+          background-color: #C81010;
+        }
+        .delete-account-btn:hover {
+          background-color: #C81010;
+        }
       </style>
+      
       
 </head>
 
@@ -116,7 +121,14 @@
                     <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Home</a>
             
 
-                    <a href="FulfilledPosts.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Fulfilled Posts</a>
+                    <a href="scheduleSelection.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>schedule selection for Drop-off</a>
+
+                    <div class="nav-item dropdown active">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Posts</a>
+                      <div class="dropdown-menu bg-transparent border-0">
+                          <a href="FulfilledPosts.html" class="dropdown-item">Fulfilled posts</a>
+                          <a href="organizationPosts.html" class="dropdown-item">my posts</a>
+                         
                 </div>
                 
             </nav>
@@ -219,52 +231,29 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-            <div class="container">
-              <table id="postTable">
-                <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Options</th>
-                </tr>
-                <tr>
-                  <td>school supplies request</td>
-                  <td>math and science book for grade 7</td>
-                  <td class="options">
-                    <a href="#" onclick="deleteRow(this)">Delete</a>
-                    <a href="updatePostInfoORG.html">Update</a>
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>toys request</td>
-                  <td> toys of age range 9-11</td>
-                  <td class="options">
-                    <a href="#" onclick="deleteRow(this)">Delete</a>
-                    <a href="updatePostInfoORG.html">Update</a>
-                   
-                  </td>
-                </tr>
-                <tr>
-                  <td>clothes request</td>
-                  <td>1 blue shirt small
-                      2 black trousers meduim
-                  </td>
-                  <td class="options">
-                    <a href="#" onclick="deleteRow(this)">Delete</a>
-                    <a href="updatePostInfoORG.html">Update</a>
-                    
-                  </td>
-                </tr>
            
-              </table>
-            </div>
-            
-            <script>
-              function deleteRow(link) {
-                var row = link.parentNode.parentNode;
-                row.parentNode.removeChild(row);
-              }
-            </script>
+            <div class="container">
+                
+                <form action="#" method="post">
+                  <label for="firstName">First Name:</label>
+                  <input type="text" id="firstName" name="firstName" value="John" required>
+                  
+                  <label for="lastName">Last Name:</label>
+                  <input type="text" id="lastName" name="lastName" value="Doe" required>
+                  
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" value="john@example.com" required>
+                  
+                  
+                  <input type="submit" value="Update Account Information">
+                </form>
+                
+                <form action="#" method="post">
+                  <input type="submit" class="delete-account-btn" value="Delete Account">
+                </form>
+              </div>
+              
+              
         
             
             <!-- Footer Start -->
