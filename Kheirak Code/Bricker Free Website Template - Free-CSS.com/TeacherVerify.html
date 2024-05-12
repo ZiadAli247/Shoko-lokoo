@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> kheirak</title>
+    <title>kheirak</title>
     <link rel="icon" type="image/x-icon" href="img/kheirakicon.ico">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -15,8 +15,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -43,53 +43,52 @@
         <!-- Spinner End -->
 
 
-<!-- Sign Up Start -->
-<div class="container-fluid">
-    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-            <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                    <a href="index.html" class="">
-                        <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Kheirak</h3>
-                    </a>
-                    <h3>Teacher Sign Up</h3>
-                </div>
+        <!-- Sign Up Start -->
+        <div class="container-fluid">
+            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="index.html" class="">
+                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Kheirak</h3>
+                            </a>
+                            <h3>Teacher Sign Up</h3>
+                        </div>
 
-                <!-- Additional fields for subjects and pro-bono classes/students -->
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingSubjects" placeholder="Subjects you can teach">
-                    <label for="floatingSubjects">Subjects You Can Teach</label>
-                </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingSubjects" placeholder="Subjects you can teach">
+                            <label for="floatingSubjects">Subjects You Can Teach</label>
+                        </div>
 
-                <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="floatingClasses" placeholder="Number of Pro-bono Classes">
-                    <label for="floatingClasses">Number of Pro-bono Classes</label>
-                </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="floatingClasses" placeholder="Number of Pro-bono Classes">
+                            <label for="floatingClasses">Number of Pro-bono Classes</label>
+                        </div>
 
-                <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="floatingStudents" placeholder="Number of Pro-bono Students">
-                    <label for="floatingStudents">Number of Pro-bono Students</label>
-                </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="floatingStudents" placeholder="Number of Pro-bono Students">
+                            <label for="floatingStudents">Number of Pro-bono Students</label>
+                        </div>
 
-                <!-- Upload document(s) for verification -->
-                <div class="form-group mb-3">
-                    <label for="verificationDocuments" class="form-label">Upload Documents for Verification</label>
-                    <input type="file" class="form-control-file" id="verificationDocuments" multiple accept="image/*,.pdf">
-                    <small class="form-text text-muted">Upload document(s) to prove your qualifications (e.g., teaching credentials).</small>
-                </div>
+                        <!-- Upload document(s) for verification -->
+                        <div class="form-group mb-3">
+                            <label for="verificationDocuments" class="form-label">Upload Documents for Verification</label>
+                            <input type="file" class="form-control-file" id="verificationDocuments" multiple accept="image/*,.pdf">
+                            <small class="form-text text-muted">Upload document(s) to prove your qualifications (e.g., teaching credentials).</small>
+                        </div>
 
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                   
-                    <a href=""> </a>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                           
+                            <a href=""> </a>
+                        </div>
+                        <form id="signupForm" onsubmit="return validateForm()" action="signin.html">
+                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+                        </form>
+                    </div>
                 </div>
-                <form action="signin.html">
-                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
-                </form>
             </div>
         </div>
-    </div>
-</div>
-<!-- Sign Up End -->
+        <!-- Sign Up End -->
 
 
     </div>
@@ -107,6 +106,48 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function validateForm() {
+            var subjects = document.getElementById("floatingSubjects").value;
+            var classes = document.getElementById("floatingClasses").value;
+            var students = document.getElementById("floatingStudents").value;
+            var verificationDocuments = document.getElementById("verificationDocuments").files;
+
+            var errorMessage = "";
+            if (subjects.trim() === "") {
+                errorMessage += "Subjects You Can Teach cannot be empty.\n";
+                document.getElementById("floatingSubjects").classList.add("is-invalid");
+            } else {
+                document.getElementById("floatingSubjects").classList.remove("is-invalid");
+            }
+            if (classes.trim() === "") {
+                errorMessage += "Number of Pro-bono Classes cannot be empty.\n";
+                document.getElementById("floatingClasses").classList.add("is-invalid");
+            } else {
+                document.getElementById("floatingClasses").classList.remove("is-invalid");
+            }
+            if (students.trim() === "") {
+                errorMessage += "Number of Pro-bono Students cannot be empty.\n";
+                document.getElementById("floatingStudents").classList.add("is-invalid");
+            } else {
+                document.getElementById("floatingStudents").classList.remove("is-invalid");
+            }
+            if (verificationDocuments.length === 0) {
+                errorMessage += "Please upload verification documents.\n";
+                document.getElementById("verificationDocuments").classList.add("is-invalid");
+            } else {
+                document.getElementById("verificationDocuments").classList.remove("is-invalid");
+            }
+
+            if (errorMessage !== "") {
+                alert(errorMessage);
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
 </body>
 
 </html>

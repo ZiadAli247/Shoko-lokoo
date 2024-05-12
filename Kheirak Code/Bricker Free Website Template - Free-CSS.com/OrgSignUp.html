@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title> kheirak</title>
@@ -42,111 +41,99 @@
         </div>
         <!-- Spinner End -->
 
-
-<!-- Sign Up Start -->
-<div class="container-fluid">
-    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-            <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h3>Organization Representative Sign Up</h3>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
-                    <label for="firstName">First Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-                    <label for="lastName">Last Name</label>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-check-label">Gender:</label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="maleRadio" name="gender" value="male">
-                        <label class="form-check-label" for="maleRadio">Male</label>
+        <!-- Sign Up Start -->
+        <div class="container-fluid">
+            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h3>Organization Representative Sign Up</h3>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label">Gender:</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="maleRadio" name="gender" value="male">
+                                <label class="form-check-label" for="maleRadio">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="femaleRadio" name="gender" value="female">
+                                <label class="form-check-label" for="femaleRadio">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number">
+                            <label for="contactNumber">Contact Number</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="organizationName" placeholder="Organization Name">
+                            <label for="organizationName">Organization Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="organizationType">
+                                <option value="" disabled selected>Select Organization Type</option>
+                                <option value="School">School</option>
+                                <option value="Hospital">Hospital</option>
+                                <option value="Church">Church</option>
+                                <option value="Mosque">Mosque</option>
+                                <option value="Non-Profit">Non-Profit</option>
+                                <!-- Add more options for other organization types as needed -->
+                            </select>
+                            <label for="organizationType">Organization Type</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="organizationAddress" placeholder="Organization Address">
+                            <label for="organizationAddress">Organization Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="organizationArea" placeholder="Organization Area">
+                            <label for="organizationArea">Organization Area</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="organizationGovernorate">
+                                <option value="" disabled selected>Select Governorate</option>
+                                <option value="Cairo">Cairo</option>
+                                <option value="Alexandria">Alexandria</option>
+                                <option value="Giza">Giza</option>
+                                <!-- Add more options for other governorates as needed -->
+                            </select>
+                            <label for="organizationGovernorate">Organization Governorate</label>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="verificationDocuments" class="form-label">Upload Documents for Organization Verification</label>
+                            <input type="file" class="form-control-file" id="verificationDocuments" multiple accept="image/*,.pdf">
+                            <small class="form-text text-muted">Upload document(s) to prove your organization's credibility (e.g., registration certificate).</small>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="organizationLocation" placeholder="Organization Location (Google Maps)">
+                            <label for="organizationLocation">Organization Location (Google Maps)</label>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <!-- Add more elements here if needed -->
+                        </div>
+                        <form id="signupForm" action="signin.html">
+                            <button type="button" onclick="validateForm()" class="btn btn-primary py-3 w-100 mb-4">Sign in</button>
+                        </form>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="femaleRadio" name="gender" value="female">
-                        <label class="form-check-label" for="femaleRadio">Female</label>
-                    </div>
                 </div>
-
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                    <label for="email">Email</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number">
-                    <label for="contactNumber">Contact Number</label>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                    <label for="password">Password</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="organizationName" placeholder="Organization Name">
-                    <label for="organizationName">Organization Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <select class="form-select" id="organizationType">
-                        <option value="" disabled selected>Select Organization Type</option>
-                        <option value="School">School</option>
-                        <option value="Hospital">Hospital</option>
-                        <option value="Church">Church</option>
-                        <option value="Mosque">Mosque</option>
-                        <option value="Non-Profit">Non-Profit</option>
-                        <!-- Add more options for other organization types as needed -->
-                    </select>
-                    <label for="organizationType">Organization Type</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="organizationAddress" placeholder="Organization Address">
-                    <label for="organizationAddress">Organization Address</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="organizationArea" placeholder="Organization Area">
-                    <label for="organizationArea">Organization Area</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <select class="form-select" id="organizationGovernorate">
-                        <option value="" disabled selected>Select Governorate</option>
-                        <option value="Cairo">Cairo</option>
-                        <option value="Alexandria">Alexandria</option>
-                        <option value="Giza">Giza</option>
-                        <!-- Add more options for other governorates as needed -->
-                    </select>
-                    <label for="organizationGovernorate">Organization Governorate</label>
-                </div>
-
-                <!-- Upload document(s) for organization verification -->
-                <div class="form-group mb-3">
-                    <label for="verificationDocuments" class="form-label">Upload Documents for Organization Verification</label>
-                    <input type="file" class="form-control-file" id="verificationDocuments" multiple accept="image/*,.pdf">
-                    <small class="form-text text-muted">Upload document(s) to prove your organization's credibility (e.g., registration certificate).</small>
-                </div>
-
-                <!-- Google map location for organization -->
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="organizationLocation" placeholder="Organization Location (Google Maps)">
-                    <label for="organizationLocation">Organization Location (Google Maps)</label>
-                </div>
-
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                   
-                    <a href=""> </a>
-                </div>
-                <form action="signin.html">
-                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign in</button>
-                </form>
             </div>
         </div>
-    </div>
-</div>
-<!-- Sign Up End -->
-
+        <!-- Sign Up End -->
     </div>
 
     <!-- JavaScript Libraries -->
@@ -162,6 +149,92 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
 
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var contactNumber = document.getElementById("contactNumber").value;
+            var password = document.getElementById("password").value;
+            var organizationName = document.getElementById("organizationName").value;
+            var organizationType = document.getElementById("organizationType").value;
+            var organizationAddress = document.getElementById("organizationAddress").value;
+            var organizationArea = document.getElementById("organizationArea").value;
+            var organizationGovernorate = document.getElementById("organizationGovernorate").value;
+            var verificationDocuments = document.getElementById("verificationDocuments").value;
+            var organizationLocation = document.getElementById("organizationLocation").value;
+    
+            var errorMessage = "";
+            if (firstName.trim() === "") {
+                errorMessage += "First Name cannot be empty.\n";
+                document.getElementById("firstName").classList.add("is-invalid");
+            } else {
+                document.getElementById("firstName").classList.remove("is-invalid");
+            }
+            if (lastName.trim() === "") {
+                errorMessage += "Last Name cannot be empty.\n";
+                document.getElementById("lastName").classList.add("is-invalid");
+            } else {
+                document.getElementById("lastName").classList.remove("is-invalid");
+            }
+            if (email.trim() === "") {
+                errorMessage += "Email cannot be empty.\n";
+                document.getElementById("email").classList.add("is-invalid");
+            } else {
+                document.getElementById("email").classList.remove("is-invalid");
+            }
+            if (contactNumber.trim() === "") {
+                errorMessage += "Contact Number cannot be empty.\n";
+                document.getElementById("contactNumber").classList.add("is-invalid");
+            } else {
+                document.getElementById("contactNumber").classList.remove("is-invalid");
+            }
+            if (password.trim() === "") {
+                errorMessage += "Password cannot be empty.\n";
+                document.getElementById("password").classList.add("is-invalid");
+            } else {
+                document.getElementById("password").classList.remove("is-invalid");
+            }
+            if (organizationName.trim() === "") {
+                errorMessage += "Organization Name cannot be empty.\n";
+                document.getElementById("organizationName").classList.add("is-invalid");
+            } else {
+                document.getElementById("organizationName").classList.remove("is-invalid");
+            }
+            if (organizationType.trim() === "") {
+                errorMessage += "Organization Type cannot be empty.\n";
+                document.getElementById("organizationType").classList.add("is-invalid");
+            } else {
+                document.getElementById("organizationType").classList.remove("is-invalid");
+            }
+            if (organizationAddress.trim() === "") {
+                errorMessage += "Organization Address cannot be empty.\n";
+                document.getElementById("organizationAddress").classList.add("is-invalid");
+            } else {
+                document.getElementById("organizationAddress").classList.remove("is-invalid");
+            }
+            if (organizationArea.trim() === "") {
+                errorMessage += "Organization Area cannot be empty.\n";
+                document.getElementById("organizationArea").classList.add("is-invalid");
+            } else {
+                document.getElementById("organizationArea").classList.remove("is-invalid");
+            }
+            if (organizationGovernorate.trim() === "") {
+                errorMessage += "Organization Governorate cannot be empty.\n";
+                document.getElementById("organizationGovernorate").classList.add("is-invalid");
+            } else {
+                document.getElementById("organizationGovernorate").classList.remove("is-invalid");
+            }
+    
+            if (errorMessage !== "") {
+                alert(errorMessage);
+                return false;
+            } else {
+                document.getElementById("signupForm").submit();
+            }
+        }
+    </script>
+    
+</body>
 </html>

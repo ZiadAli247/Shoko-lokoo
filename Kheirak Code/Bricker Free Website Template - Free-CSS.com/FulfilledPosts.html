@@ -32,70 +32,84 @@
     <link href="css/style.css" rel="stylesheet">
     
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #002633;
-      }
-      .bg-dark {
-          margin-top: 33px;
-      }
-      .container {
-background-color: #C81010;
-padding: 20px;
-border-radius: 5px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-width: 600px;
-margin: 50px auto;
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #002633;
+        }
+        .bg-dark {
+            margin-top: 33px;
+        }
+        
+        h2 {
+          margin-top: 0;
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 20px;
+          color: #f0f0f0;
+        }
+       
+        .donation-post {
+            background-color: #C81010;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 33px auto 0;
+        }
+        .donation-post h2 {
+            margin-top: 0;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .donation-post form {
+            display: flex;
+            flex-direction: column;
+        }
+        .donation-post label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #f0f0f0;
+        }
+        .donation-post select, .donation-post input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .donation-post input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .donation-post input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        a.notif {
+            position: relative;
+            display: block;
+            background-repeat: no-repeat !important;
+            background: url('./img/bell.png') !important; 
+            background-size: contain;
+            text-decoration: none;
+        }
+        .num {
+            position: absolute;
+            right: 11px;
+            top: 6px;
+            color: #fff;
+        }
+        body {
+margin: 0; 
+padding: 0; 
+}
 
-}
-p{
-color: #f0f0f0;
-font-size: 20px;
-}
-h3 {
-margin-top: 0;
-font-size: 30px;
-text-align: center;
-margin-bottom: 20px;
-color: #f0f0f0;
-font-weight: bold;
 
-}
-.donation-post {
-border: 1px solid #ccc;
-padding: 10px;
-margin-bottom: 10px;
-border-radius: 4px;
-
-}
-.details-btn {
-background-color: #007bff;
-border: none;
-padding: 8px 16px;
-border-radius: 4px;
-cursor: pointer;
-font-size: 14px;
-transition: background-color 0.3s ease;
-color: #f0f0f0;
-}
-.details-btn:hover {
-background-color: #0056b3;
-}
-.delete-btn {
-background-color: #dc3545;
-color: #fff;
-border: none;
-padding: 8px 16px;
-border-radius: 4px;
-cursor: pointer;
-font-size: 14px;
-transition: background-color 0.3s ease;
-}
-.delete-btn:hover {
-background-color: #c82333;
-}
-</style>
-
+        
+      </style>
       
 </head>
 
@@ -132,9 +146,16 @@ background-color: #c82333;
                     <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Home</a>
             
 
-                    <a href="organizationPosts.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>My Posts</a>
+                    <a href="scheduleSelection.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>schedule selection for Drop-off</a>
 
-                    
+                    <div class="nav-item dropdown active">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Posts</a>
+                      <div class="dropdown-menu bg-transparent border-0">
+                          <a href="FulfilledPosts.html" class="dropdown-item">Fulfilled posts</a>
+                          <a href="organizationPosts.html" class="dropdown-item">my posts</a>
+                         
+                      </div>
+                  </div> 
                 </div>
                 
             </nav>
@@ -229,9 +250,9 @@ background-color: #c82333;
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
                             <a href="#" class="dropdown-item">Settings</a>
-                            <a href="signup.html" class="dropdown-item">Change Password</a>
+                            <a href="ForgotPassword.html" class="dropdown-item">Change Password</a>
 
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="signin.html" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </div>
